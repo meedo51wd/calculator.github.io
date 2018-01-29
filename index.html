@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Resposive Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="site description">
+  <meta name="keywords" content="<site keywords">
+  <meta name="author" content="MeeDO51">
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="style.css">
+<script>
+function myFunction() {
+    window.open("https://github.com/meedo51wd/calculator.github.io");
+}
+function myFunctions() {
+    window.open("https://demo.meedo51.pro/calculator.zip");
+}
+</script>
+</head>
+<body>
+<SCRIPT src="js.js"></SCRIPT>
+<div class="container">
+  <h2>Resposive Calculator</h2>
+  <button onclick="myFunction();" class="btn btn-warning">Download it from <i class="fa fa-github fa-lg" style="color:#2E2E2E;"></i></button>
+  <button onclick="myFunctions();" class="btn btn-warning">Download it from <i class="fa fa-globe fa-lg" style="color:#2E2E2E;"></i></button>
+
+<!-- Button to Open the Modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  Calculator <i class="fa fa-calculator fa-lg"></i>
+</button>
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"><i class="fa fa-calculator fa-lg"></i> Calculator</h4>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <FORM name="calc">
+        <table class="table table-bordered table-dark">
+            <thead>
+              <tr width="100%" style="background-color: #696969;">
+                <th width="10%"><button class="btn btn-danger form-control" onclick=clear(this.form) type=reset>AC</button></th>
+                <th width="80%"><input type="text" readonly name=expr action="compute(this.form)" class="form-control" /></th>
+                <th width="10%"><button class="btn btn-success form-control" onclick="compute(this.form)" type=button>=</button></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr width="100%">
+                <td width="20%" style="background-color: #778899;">
+                    <table class="table table-dark" style="background-color: #778899;">
+                        <tr><td><button class="btn btn-warning form-control" onclick="enter(this.form, plus)" type=button>+</button></td></tr>
+                        <tr><td><button class="btn btn-warning form-control" onclick="enter(this.form, minus)" type=button>-</button></td></tr>
+                        <tr><td><button class="btn btn-warning form-control" onclick="enter(this.form, multiply)" type=button>*</button></td></tr>
+                        <tr><td><button class="btn btn-warning form-control" onclick="enter(this.form, divide)" type=button>/</button></td></tr>
+                    </table>
+                </td>
+                <td width="60%" style="background-color: #696969;">
+                    <table class="table table-dark" style="background-color: #696969;">
+                        <tr>
+                            <td><button class="btn btn-primary form-control" onclick="enter(this.form, one)" type=button>1</button></td>
+                            <td><button class="btn btn-primary form-control" onclick="enter(this.form, two)" type=button>2</button></td>
+                            <td><button class="btn btn-primary form-control" onclick="enter(this.form, three)" type=button>3</button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="btn btn-primary form-control" onclick="enter(this.form, four)" type=button>4</button></td>
+                            <td><button class="btn btn-primary form-control" onclick="enter(this.form, five)" type=button>5</button></td>
+                            <td><button class="btn btn-primary form-control" onclick="enter(this.form, six)" type=button>6</button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="btn btn-primary form-control" onclick="enter(this.form, seven)" type=button>7</button></td>
+                            <td><button class="btn btn-primary form-control" onclick="enter(this.form, eight)" type=button>8</button></td>
+                            <td><button class="btn btn-primary form-control" onclick="enter(this.form, nine)" type=button>9</button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="btn btn-primary form-control" onclick="enter(this.form, decimal)" type=button>.</button></td>
+                            <td><button class="btn btn-primary form-control" onclick="enter(this.form, zero)" type=button>0</button></td>
+                            <td><button class="btn btn-primary form-control" onclick="enter(this.form, dbzero)" type=button>00</button></td>
+                        </tr>
+                    </table>
+                </td>
+                <td width="20%" style="background-color: #778899;">
+                    <table class="table table-bordered table-dark" style="background-color: #778899;">
+                        <tr><td><button class="btn btn-primary form-control" onclick="enter(this.form, fifty)" type=button>50</button></td></tr>
+                        <tr><td><button class="btn btn-primary form-control" onclick="enter(this.form, onehand)" type=button>100</button></td></tr>
+                        <tr><td><button class="btn btn-primary form-control" onclick="enter(this.form, fivehand)" type=button>500</button></td></tr>
+                        <tr><td><button class="btn btn-primary form-control" onclick="enter(this.form, onethus)" type=button>1000</button></td></tr>
+                    </table>
+                </td>
+              </tr>
+            </tbody>
+        </table>
+        </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+<!-- This project was created by MeeDO51 -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="ajax/jquery/jquery.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>

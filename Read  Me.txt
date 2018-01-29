@@ -1,0 +1,12 @@
+﻿# Project Name: Responsive Calculator.
+
+# Project's Idea:
+Responsive calculator with modal.
+
+# Project Features:
+- Responsive.
+- Modal calculator.
+
+# Project Author: Ahmed Alsaleh (MeeDO51).
+
+You can try this project by visiting demo.meedo51.pro/calculator
